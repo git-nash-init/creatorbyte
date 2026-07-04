@@ -7,7 +7,7 @@ import { useMounted } from "@/lib/hooks/useMounted";
 import type { PageStatus, PaymentPage } from "@/lib/types";
 import { cn, discountPercent, formatINR } from "@/lib/utils";
 import { StatCards } from "@/components/shared/StatCards";
-import { EmptyState } from "@/components/shared/EmptyState";
+import { RocketEmpty } from "@/components/shared/RocketEmpty";
 import { StatusBadge, EnabledBadge } from "@/components/shared/StatusBadge";
 import { CoverThumb } from "@/components/shared/CoverThumb";
 import { CopyLinkButton, OpenLinkButton } from "@/components/shared/ShareButton";
@@ -285,10 +285,9 @@ export default function PaymentPagesPage() {
       {/* Content */}
       <div className="mt-5">
         {visible.length === 0 ? (
-          <EmptyState
-            icon="storefront"
-            title={`No ${tab} pages`}
-            description="Create a payment page to start selling your digital products."
+          <RocketEmpty
+            title="Your journey starts here 🚀"
+            description="You haven't created any payment pages yet. Launch your first one and start turning your skills into income — your audience is waiting."
             action={
               <Link href="/payments/new">
                 <MdFilledButton>

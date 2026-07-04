@@ -71,6 +71,11 @@ export const useLockedStore = create<LockedState>()(
         })),
       get: (id) => get().items.find((i) => i.id === id),
     }),
-    { name: "cb-locked" }
+    // version bump discards previously persisted dummy/seed data
+    {
+      name: "cb-locked",
+      version: 1,
+      migrate: () => ({ items: [] as LockedContent[] }),
+    }
   )
 );

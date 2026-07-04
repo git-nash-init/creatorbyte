@@ -7,7 +7,7 @@ import { useMounted } from "@/lib/hooks/useMounted";
 import type { PageStatus } from "@/lib/types";
 import { cn, formatINR } from "@/lib/utils";
 import { StatCards } from "@/components/shared/StatCards";
-import { EmptyState } from "@/components/shared/EmptyState";
+import { RocketEmpty } from "@/components/shared/RocketEmpty";
 import { StatusBadge } from "@/components/shared/StatusBadge";
 import { CopyLinkButton, OpenLinkButton } from "@/components/shared/ShareButton";
 import { LockedRowMenu } from "@/components/locked/LockedRowMenu";
@@ -169,10 +169,9 @@ export default function LockedContentPage() {
       {/* List */}
       <div className="mt-5">
         {visible.length === 0 ? (
-          <EmptyState
-            icon="lock"
-            title={`No ${tab} content`}
-            description="Lock text, images, videos or files behind a price and share the link."
+          <RocketEmpty
+            title="Elevate your journey 🚀"
+            description="Nothing locked yet — your premium content deserves a price tag. Put your best work behind an unlock and watch your effort take off."
             action={
               <Link href="/locked/new">
                 <MdFilledButton>

@@ -82,6 +82,11 @@ export const usePagesStore = create<PagesState>()(
         })),
       get: (id) => get().pages.find((p) => p.id === id),
     }),
-    { name: "cb-pages" }
+    // version bump discards previously persisted dummy/seed data
+    {
+      name: "cb-pages",
+      version: 1,
+      migrate: () => ({ pages: [] as PaymentPage[] }),
+    }
   )
 );
