@@ -207,9 +207,10 @@ export default function PaymentPagesPage() {
       <div className="mt-4 flex flex-col gap-3 lg:flex-row lg:items-center">
         <div className="flex-1">
           <MdOutlinedTextField
+            name="search"
             placeholder="Search"
             value={query}
-            style={{ width: "100%", "--md-outlined-field-container-shape": "9999px" } as React.CSSProperties}
+            style={{ width: "100%", "--md-outlined-text-field-container-shape": "28px" } as React.CSSProperties}
             onInput={(e: React.FormEvent<HTMLInputElement>) =>
               setQuery((e.target as HTMLInputElement).value)
             }

@@ -61,6 +61,46 @@ h1, h2, h3, h4, .font-display {
   font-family: var(--font-fredoka), "Fredoka", system-ui, sans-serif;
 }
 
+/* -----------------------------------------------------------------
+   Tailwind v4 preflight applies `* { margin:0; padding:0; border:0 }`
+   to light-DOM elements, which overrides Material Web's `:host`
+   padding rules (page styles always beat shadow :host styles).
+   Restore the M3 button spacing tokens explicitly.
+   ----------------------------------------------------------------- */
+md-filled-button,
+md-outlined-button,
+md-elevated-button,
+md-filled-tonal-button {
+  padding-inline-start: 24px;
+  padding-inline-end: 24px;
+}
+md-filled-button[has-icon]:not([trailing-icon]),
+md-outlined-button[has-icon]:not([trailing-icon]),
+md-elevated-button[has-icon]:not([trailing-icon]),
+md-filled-tonal-button[has-icon]:not([trailing-icon]) {
+  padding-inline-start: 16px;
+  padding-inline-end: 24px;
+}
+md-filled-button[has-icon][trailing-icon],
+md-outlined-button[has-icon][trailing-icon],
+md-elevated-button[has-icon][trailing-icon],
+md-filled-tonal-button[has-icon][trailing-icon] {
+  padding-inline-start: 24px;
+  padding-inline-end: 16px;
+}
+md-text-button {
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
+}
+md-text-button[has-icon]:not([trailing-icon]) {
+  padding-inline-start: 12px;
+  padding-inline-end: 16px;
+}
+md-text-button[has-icon][trailing-icon] {
+  padding-inline-start: 16px;
+  padding-inline-end: 12px;
+}
+
 /* Thin, on-brand scrollbars */
 * {
   scrollbar-width: thin;

@@ -50,9 +50,10 @@ export default function CreatorsPage() {
 
       <div className="mb-5">
         <MdOutlinedTextField
+          name="search"
           placeholder="Search creators by name or email"
           value={query}
-          style={{ width: "100%", "--md-outlined-field-container-shape": "9999px" } as React.CSSProperties}
+          style={{ width: "100%", "--md-outlined-text-field-container-shape": "28px" } as React.CSSProperties}
           onInput={(e: React.FormEvent<HTMLInputElement>) =>
             setQuery((e.target as HTMLInputElement).value)
           }
