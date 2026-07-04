@@ -1,0 +1,145 @@
+/* ============================================================
+   CreatorByte — Material 3 theme tokens
+   Brand: warm near-black #202020, cream #F4EFE7 / #EDE6DD,
+   blue accent #72A4F2 (light #AAC9F7). Fredoka + DM Sans.
+   Tokens follow the M3 --md-sys-color-* naming so every
+   @material/web component picks them up automatically.
+   ============================================================ */
+
+:root,
+[data-theme="light"] {
+  /* Primary — accessible brand blue (white text on filled buttons) */
+  --md-sys-color-primary: #2f6be0;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d6e4ff;
+  --md-sys-color-on-primary-container: #0a1b33;
+
+  /* Secondary — signature near-black "dark pill" */
+  --md-sys-color-secondary: #202020;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #ede6dd;
+  --md-sys-color-on-secondary-container: #202020;
+
+  /* Tertiary — soft brand blue accent */
+  --md-sys-color-tertiary: #5b7fb9;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #aac9f7;
+  --md-sys-color-on-tertiary-container: #0a1b33;
+
+  /* Surfaces — warm cream family */
+  --md-sys-color-background: #f4efe7;
+  --md-sys-color-on-background: #202020;
+  --md-sys-color-surface: #fbf7f1;
+  --md-sys-color-on-surface: #202020;
+  --md-sys-color-surface-dim: #ded9d1;
+  --md-sys-color-surface-bright: #fdfaf5;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f8f3ec;
+  --md-sys-color-surface-container: #f4efe7;
+  --md-sys-color-surface-container-high: #ede6dd;
+  --md-sys-color-surface-container-highest: #e7dfd4;
+  --md-sys-color-surface-variant: #e7dfd4;
+  --md-sys-color-on-surface-variant: #55514b;
+
+  --md-sys-color-outline: #857f76;
+  --md-sys-color-outline-variant: #d8cfc3;
+
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+
+  /* Positive (custom, used for revenue/enabled badges) */
+  --cb-color-success: #16794a;
+  --cb-color-success-container: #cdefd8;
+  --cb-color-on-success-container: #05341f;
+
+  --md-sys-color-inverse-surface: #333029;
+  --md-sys-color-inverse-on-surface: #f6eee3;
+  --md-sys-color-inverse-primary: #aac9f7;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-surface-tint: #2f6be0;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --md-sys-color-primary: #aac9f7;
+  --md-sys-color-on-primary: #0a2a52;
+  --md-sys-color-primary-container: #2f6be0;
+  --md-sys-color-on-primary-container: #d6e4ff;
+
+  --md-sys-color-secondary: #e7dfd4;
+  --md-sys-color-on-secondary: #2a2620;
+  --md-sys-color-secondary-container: #3a362f;
+  --md-sys-color-on-secondary-container: #ede6dd;
+
+  --md-sys-color-tertiary: #aac9f7;
+  --md-sys-color-on-tertiary: #0a2a52;
+  --md-sys-color-tertiary-container: #3d5f96;
+  --md-sys-color-on-tertiary-container: #d6e4ff;
+
+  --md-sys-color-background: #17150f;
+  --md-sys-color-on-background: #eae1d6;
+  --md-sys-color-surface: #17150f;
+  --md-sys-color-on-surface: #eae1d6;
+  --md-sys-color-surface-dim: #17150f;
+  --md-sys-color-surface-bright: #3d382f;
+  --md-sys-color-surface-container-lowest: #100e09;
+  --md-sys-color-surface-container-low: #1f1c16;
+  --md-sys-color-surface-container: #232019;
+  --md-sys-color-surface-container-high: #2d2921;
+  --md-sys-color-surface-container-highest: #38332b;
+  --md-sys-color-surface-variant: #4a463e;
+  --md-sys-color-on-surface-variant: #cec6b9;
+
+  --md-sys-color-outline: #979083;
+  --md-sys-color-outline-variant: #4a463e;
+
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+
+  --cb-color-success: #78d9a0;
+  --cb-color-success-container: #234d38;
+  --cb-color-on-success-container: #cdefd8;
+
+  --md-sys-color-inverse-surface: #eae1d6;
+  --md-sys-color-inverse-on-surface: #333029;
+  --md-sys-color-inverse-primary: #2f6be0;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-surface-tint: #aac9f7;
+
+  color-scheme: dark;
+}
+
+/* Typography — wire brand fonts into M3 typeface tokens */
+:root {
+  --md-ref-typeface-brand: var(--font-fredoka), "Fredoka", system-ui, sans-serif;
+  --md-ref-typeface-plain: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+
+  /* Signature rounded/pill shapes */
+  --md-sys-shape-corner-full: 9999px;
+
+  /* Icon glyph font (Material Symbols Rounded, loaded in layout) */
+  --md-icon-font: "Material Symbols Rounded";
+
+  /* Motion — M3 easing/durations for our own transitions */
+  --cb-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --cb-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --cb-duration-short: 150ms;
+  --cb-duration-medium: 300ms;
+}
+
+/* Component-level brand nudges */
+:root {
+  /* pill buttons everywhere */
+  --md-filled-button-container-shape: 9999px;
+  --md-outlined-button-container-shape: 9999px;
+  --md-text-button-container-shape: 9999px;
+  --md-elevated-button-container-shape: 9999px;
+  --md-filled-tonal-button-container-shape: 9999px;
+}
